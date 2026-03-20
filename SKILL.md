@@ -27,26 +27,26 @@ Optimize for every search surface where humans type, speak, or point a camera to
 
 ## Reference Files
 
-Load only the 1 to 2 files most relevant to the user's specific question. Do not load all files. This keeps responses focused and avoids unnecessary token usage.
+Load only the 1 to 2 files from `references/` most relevant to the user's specific question. Do not load all files. This keeps responses focused and avoids unnecessary token usage.
 
 | Need | Load |
 |------|------|
-| Technical SEO, keywords, backlinks, site speed | `seo-foundation.md` |
-| Featured snippets, answer capsules, People Also Ask | `aeo-voice.md` |
-| Voice search, speakable schema, smart speakers | `aeo-voice.md` |
-| Knowledge Graph, Wikidata, entity markup | `entity-semantic.md` |
-| Topic clusters, topical authority, semantic gaps | `entity-semantic.md` |
-| Google Maps, Apple Maps, GBP, local citations | `ai-local-seo.md` |
-| TikTok, Instagram, Pinterest, LinkedIn search | `social-video-visual.md` |
-| YouTube optimization, video chapters, thumbnails | `social-video-visual.md` |
-| Google Lens, Pinterest Lens, image search | `multimodal.md` |
-| Google AI Overviews, AI-generated summaries | `aaio-overviews.md` |
-| App Store, Google Play search rankings | `aso.md` |
-| Apple Podcasts, Spotify, audio indexing | `podcast-audio.md` |
-| Amazon, Walmart, marketplace algorithms | `marketplace.md` |
-| Statistics with sources (for audits and reports) | `statistics.md` |
-| Audit scorecards, plan templates, schema code | `output-templates.md` |
-| SEvO meta-framework (full audit only) | `sevo.md` |
+| Technical SEO, keywords, backlinks, site speed | `references/seo-foundation.md` |
+| Featured snippets, answer capsules, People Also Ask | `references/aeo-voice.md` |
+| Voice search, speakable schema, smart speakers | `references/aeo-voice.md` |
+| Knowledge Graph, Wikidata, entity markup | `references/entity-semantic.md` |
+| Topic clusters, topical authority, semantic gaps | `references/entity-semantic.md` |
+| Google Maps, Apple Maps, GBP, local citations | `references/ai-local-seo.md` |
+| TikTok, Instagram, Pinterest, LinkedIn search | `references/social-video-visual.md` |
+| YouTube optimization, video chapters, thumbnails | `references/social-video-visual.md` |
+| Google Lens, Pinterest Lens, image search | `references/multimodal.md` |
+| Google AI Overviews, AI-generated summaries | `references/aaio-overviews.md` |
+| App Store, Google Play search rankings | `references/aso.md` |
+| Apple Podcasts, Spotify, audio indexing | `references/podcast-audio.md` |
+| Amazon, Walmart, marketplace algorithms | `references/marketplace.md` |
+| Statistics with sources (for audits and reports) | `references/statistics.md` |
+| Audit scorecards, plan templates, schema code | `references/output-templates.md` |
+| SEvO meta-framework (full audit only) | `references/sevo.md` |
 
 Only load `statistics.md` when producing audits, reports, or client-facing content that needs sourced data. Only load `output-templates.md` when the user explicitly requests a deliverable format.
 
