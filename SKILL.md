@@ -48,7 +48,7 @@ Load only the 1 to 2 files from `references/` most relevant to the user's specif
 | Audit scorecards, plan templates, schema code | `references/output-templates.md` |
 | SEvO meta-framework (full audit only) | `references/sevo.md` |
 
-Only load `statistics.md` when producing audits, reports, or client-facing content that needs sourced data. Only load `output-templates.md` when the user explicitly requests a deliverable format.
+Only load `references/statistics.md` when producing audits, reports, or client-facing content that needs sourced data. Only load `references/output-templates.md` when the user explicitly requests a deliverable format.
 
 ## The 13 Disciplines
 
@@ -169,4 +169,4 @@ Apply to every page:
 | Competitive Gap Report | Side-by-side per discipline |
 | Monthly Performance Report | Rankings, traffic, snippet tracking |
 
-Load `output-templates.md` for full templates.
+Load `references/output-templates.md` for full templates.
