@@ -1,274 +1,172 @@
 ---
 name: ai-seo-skill
 description: >
-  Traditional SEO optimization across 13 disciplines. Covers search engine optimization,
-  answer engine optimization (AEO), entity SEO, semantic SEO, voice search, social search,
-  video SEO, AI local SEO, visual search, Google AI Overviews, app store optimization (ASO),
-  podcast search, and marketplace search (Amazon, Walmart). Keyword research, technical SEO,
-  featured snippets, Knowledge Graph, schema markup, GBP optimization, YouTube SEO,
-  Google Lens, site speed, backlinks, content strategy, topic clusters, local citations.
+  Audit, plan, and execute traditional search engine optimization across 13 disciplines:
+  SEO, AEO (answer engine optimization), Entity SEO, Semantic SEO, voice search, social search
+  (TikTok, Instagram, Pinterest, LinkedIn), video SEO (YouTube), AI local SEO (Google Maps,
+  Apple Maps), visual search (Google Lens), Google AI Overviews, ASO (app store optimization),
+  podcast/audio search, and marketplace search (Amazon, Walmart). Use this skill whenever the
+  user wants to improve search rankings, run an SEO audit, optimize for featured snippets,
+  build topic clusters, fix technical SEO issues, improve local search visibility, optimize
+  YouTube videos, create schema markup, research keywords, analyze competitors, or rank higher
+  on any search platform. Also use when the user mentions Google rankings, Bing, SERP, backlinks,
+  Core Web Vitals, page speed, meta tags, Knowledge Graph, or any specific search platform
+  optimization. This skill covers traditional search engines and platforms. For AI-specific
+  citation optimization (ChatGPT, Perplexity, Claude citations), use ai-search-optimization-skill.
 ---
 
-# AI SEO Skill: 13-Discipline Traditional Search Optimization
+# Traditional Search Optimization (13 Disciplines)
 
-Comprehensive search engine optimization covering every traditional discovery surface.
-From Google organic rankings to Amazon product search, this skill provides frameworks,
-checklists, and implementation guidance for 13 interconnected SEO disciplines.
+Optimize for every search surface where humans type, speak, or point a camera to find things.
 
-**Companion skill:** AI-specific optimization (GEO, LLMO, AIVO, CSO, AAIO, AI Shopping)
-lives in `ai-search-optimization-skill`. Use both skills together for full-spectrum coverage.
+## Scope
 
----
+**This skill:** Google, Bing, YouTube, TikTok, Instagram, Pinterest, LinkedIn, Apple Maps, Google Maps, Google Lens, App Stores, Spotify, Amazon, Walmart.
 
-## Step 1: Load Reference Guides
+**Companion skill:** `ai-search-optimization-skill` handles AI citation optimization (GEO, LLMO, AIVO). Use both for full coverage.
 
-Before executing any task, load the relevant reference file(s) from `references/`.
+## Reference Files
 
-| Task | Reference File(s) |
-|------|--------------------|
-| SEO audit, keyword research, technical SEO, backlinks | `seo-foundation.md` |
-| Featured snippets, People Also Ask, answer capsules | `aeo-voice.md` |
-| Voice search, conversational queries, speakable schema | `aeo-voice.md` |
+Load only the 1 to 2 files most relevant to the user's specific question. Do not load all files. This keeps responses focused and avoids unnecessary token usage.
+
+| Need | Load |
+|------|------|
+| Technical SEO, keywords, backlinks, site speed | `seo-foundation.md` |
+| Featured snippets, answer capsules, People Also Ask | `aeo-voice.md` |
+| Voice search, speakable schema, smart speakers | `aeo-voice.md` |
 | Knowledge Graph, Wikidata, entity markup | `entity-semantic.md` |
-| Topic clusters, topical authority, semantic content | `entity-semantic.md` |
+| Topic clusters, topical authority, semantic gaps | `entity-semantic.md` |
 | Google Maps, Apple Maps, GBP, local citations | `ai-local-seo.md` |
-| TikTok, Instagram, Pinterest, LinkedIn, YouTube search | `social-video-visual.md` |
-| YouTube optimization, video chapters, transcripts | `social-video-visual.md` |
-| Google Lens, Pinterest Lens, visual search | `social-video-visual.md`, `multimodal.md` |
-| Google AI Overview optimization | `aaio-overviews.md` |
-| App Store, Google Play optimization | `aso.md` |
-| Apple Podcasts, Spotify, audio search | `podcast-audio.md` |
-| Amazon A10/COSMO, Walmart AI, marketplace search | `marketplace.md` |
-| Stats, benchmarks, citation data | `statistics.md` |
-| Audit scorecards, plan templates, schema examples | `output-templates.md` |
-| SEvO meta-framework (cross-discipline orchestration) | `sevo.md` |
+| TikTok, Instagram, Pinterest, LinkedIn search | `social-video-visual.md` |
+| YouTube optimization, video chapters, thumbnails | `social-video-visual.md` |
+| Google Lens, Pinterest Lens, image search | `multimodal.md` |
+| Google AI Overviews, AI-generated summaries | `aaio-overviews.md` |
+| App Store, Google Play search rankings | `aso.md` |
+| Apple Podcasts, Spotify, audio indexing | `podcast-audio.md` |
+| Amazon, Walmart, marketplace algorithms | `marketplace.md` |
+| Statistics with sources (for audits and reports) | `statistics.md` |
+| Audit scorecards, plan templates, schema code | `output-templates.md` |
+| SEvO meta-framework (full audit only) | `sevo.md` |
 
-**Always load `statistics.md`** when producing audits, reports, or client-facing content.
-Stats must include source attribution.
+Only load `statistics.md` when producing audits, reports, or client-facing content that needs sourced data. Only load `output-templates.md` when the user explicitly requests a deliverable format.
 
----
+## The 13 Disciplines
 
-## Step 2: Identify Business Context
+### Tier 1: Core
 
-Before recommending any optimization, establish:
+1. **SEO** -- Google/Bing organic. Keywords, backlinks, technical health, Core Web Vitals, mobile. The foundation everything else builds on. 87% of ChatGPT citations match Bing's top 10.
 
-1. **Business type:** Local service, SaaS/B2B, e-commerce, professional services, healthcare, media, hospitality, education
-2. **Current organic performance:** Existing rankings, traffic, domain authority
-3. **Target audience:** Demographics, search behavior, devices, platforms
-4. **Competitive landscape:** Top 3 competitors, their strongest channels
-5. **Content assets:** Existing blog, video, podcast, product listings
-6. **Technical stack:** CMS, hosting, page speed baseline, mobile readiness
-7. **Budget and timeline:** Resources available, priority horizon (30/60/90 days)
+2. **AEO** -- Featured snippets, People Also Ask, position zero. Answer capsules (40 to 60 words after each H2), FAQ schema, HowTo schema. Win the zero-click results.
 
-This context determines which disciplines to prioritize (see Step 4).
+3. **Entity SEO** -- Knowledge Graph, Wikidata, structured data. Make your brand a recognized entity, not just text. Schema.org Organization/Person/LocalBusiness markup, consistent NAP.
 
----
+4. **Semantic SEO** -- Topic clusters, topical authority, entity-attribute-value mapping. Search engines reward interconnected depth over isolated keyword pages.
 
-## Step 3: The 13 Disciplines
+### Tier 2: Channels
 
-### Tier 1: Core (Every business needs these)
+5. **Voice Search** -- Siri, Alexa, Google Assistant. Conversational long-tail keywords, speakable schema, concise 1 to 2 sentence answers. 50%+ of searches are voice.
 
-**1. SEO (Search Engine Optimization)**
-Google and Bing organic rankings. Keywords, backlinks, technical SEO, site speed, mobile
-optimization, Core Web Vitals. The foundation that all other disciplines build on.
-Key stat: 87% of ChatGPT citations match pages already in Bing's top 10 organic results.
+6. **Social Search** -- TikTok, Instagram, Pinterest, LinkedIn as search engines. Caption keywords, hashtags, native formats. 64% of Gen Z use TikTok to search.
 
-**2. AEO (Answer Engine Optimization)**
-Featured snippets, People Also Ask, position zero, AI Overviews. Structure content with
-answer capsules (40 to 60 words after every H2), FAQ schema, and HowTo schema. Direct
-answers win the zero-click landscape.
+7. **Video SEO** -- YouTube, Google Video results. Title optimization, chapter timestamps, transcript accuracy, thumbnail CTR. World's second-largest search engine.
 
-**3. Entity SEO**
-Google Knowledge Graph, Wikidata, structured entity recognition. Schema.org markup,
-consistent NAP (Name, Address, Phone), entity disambiguation. Makes your brand a
-machine-readable "thing" rather than just a string of text.
+8. **AI Local SEO** -- Google Maps, Apple Maps, Bing Places, ChatGPT local. GBP optimization, cross-platform citations, review velocity. Critical for any geographic business.
 
-**4. Semantic SEO**
-Topic clusters, entity-attribute-value content mapping, topical authority signals.
-Build content hubs that demonstrate comprehensive expertise. Search engines reward
-depth and interconnection over isolated keyword pages.
+9. **Visual Search** -- Google Lens (12B+ monthly searches), Pinterest Lens. Descriptive alt text, ImageObject schema, product photography.
 
-### Tier 2: High-Value Channels (Priority depends on business type)
+### Tier 3: Specialized
 
-**5. Voice Search Optimization**
-Siri, Alexa, Google Assistant, smart speakers. Conversational long-tail keywords,
-speakable schema, natural language Q&A formatting. Voice queries tend to be longer
-and more question-based than typed searches.
+10. **AI Overview Optimization** -- Google's AI summary boxes. 8+ word queries, 134 to 167 word passages, entity density 15 to 20 per 1,000 words.
 
-**6. Social Search**
-TikTok, Instagram, Pinterest, LinkedIn, YouTube as search engines. Caption keywords,
-strategic hashtags, profile optimization, native content formats. Gen Z uses TikTok
-and Instagram as primary search tools for discovery.
+11. **ASO** -- Apple App Store, Google Play. Keywords in title/subtitle, screenshot A/B testing, rating velocity. 65% of downloads come from search.
 
-**7. Video SEO**
-YouTube search, Google Video results, video carousels. Title optimization, chapter
-timestamps with keyword anchors, transcript accuracy, thumbnail CTR. YouTube is the
-world's second-largest search engine.
+12. **Podcast/Audio Search** -- Apple Podcasts, Spotify, transcript indexing, RSS optimization. Audio is increasingly indexed.
 
-**8. AI Local SEO**
-Google Maps, Apple Maps, Bing Places, ChatGPT local results. Google Business Profile
-optimization, cross-platform citation consistency, review velocity and sentiment,
-local schema markup. Critical for any business serving a geographic area.
+13. **Marketplace Search** -- Amazon A10/COSMO, Walmart AI. Backend keywords, A+ content, review velocity. Each marketplace has its own algorithm.
 
-**9. Visual Search**
-Google Lens (12B+ searches per month), Pinterest Lens, visual discovery. Descriptive
-alt text, ImageObject schema, high-quality product photography, visual similarity
-optimization. Growing rapidly as camera-first search behavior increases.
+## Prioritization by Business Type
 
-### Tier 3: Specialized (Deploy when relevant to business model)
+Ask or determine: What type of business? Then focus on the disciplines that matter most.
 
-**10. AI Overview Optimization (Google-specific)**
-Google's AI-generated summary boxes. Optimized answer blocks, targeting 8+ word
-queries, passages of 134 to 167 words, high entity density. Distinct from general
-AEO because it targets Google's specific AI summary algorithm.
+| Business Type | Start With | Then Add | Lower Priority |
+|---------------|-----------|----------|---------------|
+| Local Services (dental, HVAC) | SEO, AI Local SEO, Voice Search | AEO, Entity SEO | Social, Video, ASO |
+| SaaS / B2B | SEO, AEO, Semantic SEO | AI Overviews, Entity SEO, Video | Voice, ASO, Marketplace |
+| E-Commerce / DTC | SEO, Visual Search, Marketplace | Social Search, Video SEO | Voice, ASO, Podcast |
+| Professional Services | SEO, AEO, Entity SEO, Semantic | Video SEO, AI Overviews | Social, ASO, Marketplace |
+| Healthcare | SEO, AI Local SEO, AEO | Voice Search, Entity SEO | Social, ASO, Marketplace |
+| Media / Publishing | SEO, AEO, Semantic SEO | Social Search, Video SEO | ASO, Marketplace, Voice |
+| Hospitality / Travel | SEO, AI Local SEO, Social | Voice Search, Visual Search | ASO, Podcast, Marketplace |
+| Education | SEO, AEO, Semantic SEO | Video SEO, Entity SEO | ASO, Marketplace, Podcast |
 
-**11. ASO (App Store Optimization)**
-Apple App Store and Google Play search rankings. Keywords in title and subtitle,
-screenshot A/B testing, rating management, conversion rate optimization on the
-listing page. Essential for any business with a mobile app.
+## Implementation Sequence
 
-**12. Podcast/Audio Search**
-Apple Podcasts, Spotify search, transcript indexing, RSS feed optimization.
-Episode titles with target keywords, show notes with timestamps, structured
-descriptions. Audio content is increasingly indexed by search engines.
+### Weeks 1 to 2: Foundation
+- Technical SEO audit (crawl errors, CWV, sitemap, robots.txt)
+- Keyword research for primary disciplines
+- Competitor gap analysis (top 3 competitors)
+- Schema.org audit (Organization, LocalBusiness, Product as needed)
+- GBP audit if local component exists
 
-**13. Marketplace Search**
-Amazon A10/COSMO algorithm, Walmart AI search, Etsy, eBay. Backend keywords,
-A+ content, sales velocity signals, review optimization. Each marketplace has
-its own ranking algorithm distinct from Google.
-
----
-
-## Step 4: Business Type Prioritization Matrix
-
-Use this matrix to determine which disciplines to prioritize. Numbers indicate
-recommended priority order (1 = highest).
-
-| Discipline | Local Services | SaaS / B2B | E-Commerce | Professional Services | Healthcare | Media / Publishing | Hospitality / Travel | Education |
-|------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| SEO | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
-| AEO | 3 | 2 | 4 | 2 | 2 | 2 | 3 | 2 |
-| Entity SEO | 4 | 5 | 6 | 3 | 3 | 4 | 5 | 5 |
-| Semantic SEO | 5 | 3 | 5 | 4 | 4 | 3 | 6 | 3 |
-| Voice Search | 2 | 10 | 8 | 6 | 5 | 9 | 4 | 8 |
-| Social Search | 7 | 7 | 3 | 8 | 8 | 5 | 2 | 6 |
-| Video SEO | 8 | 6 | 7 | 7 | 7 | 6 | 7 | 4 |
-| AI Local SEO | 2 | 11 | 9 | 5 | 6 | 12 | 2 | 9 |
-| Visual Search | 10 | 12 | 2 | 11 | 10 | 8 | 8 | 11 |
-| AI Overview Opt. | 6 | 4 | 10 | 9 | 9 | 7 | 10 | 7 |
-| ASO | 11 | 8 | 11 | 12 | 11 | 10 | 9 | 10 |
-| Podcast/Audio | 12 | 9 | 12 | 10 | 12 | 11 | 11 | 12 |
-| Marketplace | 13 | 13 | 2 | 13 | 13 | 13 | 13 | 13 |
-
-**How to read:** Start with priority 1, work down. Skip disciplines ranked 10+ unless
-the client specifically requests them or resources allow.
-
----
-
-## Step 5: Quick-Start Implementation
-
-For any new engagement, follow this sequence:
-
-### Week 1 to 2: Foundation
-- [ ] Run technical SEO audit (Core Web Vitals, crawl errors, sitemap, robots.txt)
-- [ ] Keyword research across primary and secondary disciplines
-- [ ] Competitor gap analysis (top 3 competitors)
-- [ ] Schema.org markup audit (Organization, LocalBusiness, Product as applicable)
-- [ ] Google Business Profile audit (if local component exists)
-
-### Week 3 to 4: Content Structure
-- [ ] Map existing content to topic clusters
-- [ ] Identify answer capsule opportunities (AEO)
-- [ ] Add FAQ schema to top 10 pages by traffic
-- [ ] Optimize meta titles and descriptions for CTR
-- [ ] Create entity disambiguation page or About schema
+### Weeks 3 to 4: Content Structure
+- Map content to topic clusters (Semantic SEO)
+- Add answer capsules to top pages (AEO)
+- FAQ schema on top 10 pages by traffic
+- Optimize titles and meta descriptions
+- Entity disambiguation page or About schema
 
 ### Month 2: Channel Expansion
-- [ ] Deploy discipline-specific optimizations per priority matrix
-- [ ] Build internal linking structure for topic clusters
-- [ ] Launch video or social content strategy (if prioritized)
-- [ ] Set up rank tracking across all active disciplines
-- [ ] Implement structured data for all relevant content types
+- Deploy channel-specific optimizations per priority table
+- Internal linking for topic clusters
+- Launch video or social strategy if prioritized
+- Structured data for all content types
+- Rank tracking across active disciplines
 
-### Month 3: Measurement and Iteration
-- [ ] Analyze ranking changes across all tracked disciplines
-- [ ] Identify featured snippet wins and losses
-- [ ] Review AI Overview appearances
-- [ ] Adjust content strategy based on performance data
-- [ ] Plan next quarter's expansion into lower-priority disciplines
+### Month 3: Measure and Iterate
+- Analyze ranking changes
+- Review featured snippet wins/losses
+- Check AI Overview appearances
+- Adjust strategy based on data
+- Plan next quarter's expansion
 
----
+## Content Optimization Checklist
 
-## Step 6: Content Optimization Checklist
+Apply to every page:
 
-Apply to every piece of content before publishing:
+**On-Page SEO:**
+- Primary keyword in title (front-loaded), H1, URL slug
+- Semantic variations in H2s and H3s
+- Meta description with keyword and CTA (under 160 chars)
+- 3+ internal links, 1 to 2 external authority links
 
-### On-Page SEO
-- [ ] Primary keyword in title tag (front-loaded)
-- [ ] Primary keyword in H1
-- [ ] Semantic variations in H2s and H3s
-- [ ] Meta description includes keyword and CTA (under 160 chars)
-- [ ] URL slug is short, descriptive, keyword-rich
-- [ ] Internal links to 3+ related pages
-- [ ] External links to 1 to 2 authoritative sources
+**AEO Layer:**
+- Answer capsule (40 to 60 words) after every H2
+- "What is..." or definition section
+- FAQ section with 3 to 5 questions + FAQ schema
+- Lists and tables for scannable data
 
-### AEO Layer
-- [ ] Answer capsule (40 to 60 words) after every H2
-- [ ] At least one definition or "What is..." section
-- [ ] FAQ section with 3 to 5 questions (FAQ schema applied)
-- [ ] Lists and tables for scannable data points
+**Entity and Semantic:**
+- Schema.org markup (Article, FAQPage, HowTo, or relevant type)
+- Consistent entity naming throughout
+- Topic cluster interlinks to pillar page
 
-### Entity and Semantic Layer
-- [ ] Schema.org markup (Article, FAQPage, HowTo, or relevant type)
-- [ ] Entity mentions are consistent (same name format throughout)
-- [ ] Topic cluster interlinks connect to pillar page
-- [ ] Content covers subtopics identified in semantic gap analysis
+**Technical:**
+- LCP under 2.5s
+- Mobile-responsive
+- Images have descriptive alt text
+- Open Graph and Twitter Card meta tags
+- Canonical URL set
 
-### Technical
-- [ ] Page loads under 2.5s (LCP)
-- [ ] Mobile-responsive layout verified
-- [ ] Images have descriptive alt text (Visual Search ready)
-- [ ] Open Graph and Twitter Card meta tags present
-- [ ] Canonical URL set correctly
+## Output Formats
 
----
+| Output | When |
+|--------|------|
+| SEO Audit Scorecard | Baseline assessment, scored per discipline |
+| Discipline Deep-Dive | Single-discipline analysis with recommendations |
+| 90-Day Plan | Prioritized roadmap with weekly milestones |
+| Content Brief | Page-level optimization guide for writers |
+| Schema Markup Package | Ready-to-implement JSON-LD |
+| Competitive Gap Report | Side-by-side per discipline |
+| Monthly Performance Report | Rankings, traffic, snippet tracking |
 
-## Step 7: Output Formats
-
-Load `output-templates.md` for full templates. Available formats:
-
-| Output | Use Case |
-|--------|----------|
-| **SEO Audit Scorecard** | Baseline assessment across all 13 disciplines. Scored 0 to 100. |
-| **Discipline Deep-Dive** | Detailed analysis and recommendations for a single discipline. |
-| **90-Day Optimization Plan** | Prioritized roadmap with weekly milestones. |
-| **Content Brief** | Single-page optimization guide for writers. Includes keywords, structure, schema. |
-| **Schema Markup Package** | Ready-to-implement JSON-LD for identified schema opportunities. |
-| **Competitive Gap Report** | Side-by-side comparison against top competitors per discipline. |
-| **Monthly Performance Report** | Tracking template for rankings, traffic, and featured snippet wins. |
-
----
-
-## Acronym Quick Reference
-
-| Acronym | Full Name | Discipline # |
-|---------|-----------|:------------:|
-| SEO | Search Engine Optimization | 1 |
-| AEO | Answer Engine Optimization | 2 |
-| NAP | Name, Address, Phone (Entity SEO) | 3 |
-| E-A-V | Entity-Attribute-Value (Semantic SEO) | 4 |
-| GBP | Google Business Profile (AI Local SEO) | 8 |
-| LCP | Largest Contentful Paint (Technical SEO) | 1 |
-| ASO | App Store Optimization | 11 |
-| A10 | Amazon's ranking algorithm | 13 |
-| COSMO | Amazon's AI ranking system | 13 |
-| SEvO | Search Everywhere Optimization (meta-framework) | All |
-| CWV | Core Web Vitals | 1 |
-| CTR | Click-Through Rate | 1 |
-| SERP | Search Engine Results Page | 1 |
-| PAA | People Also Ask | 2 |
-
-**Companion skill for AI-native search:** `ai-search-optimization-skill` covers GEO
-(Generative Engine Optimization), LLMO (LLM Optimization), AIVO (AI Voice Optimization),
-CSO (Conversational Search Optimization), AAIO (AI Agent & Infrastructure Optimization),
-and AI Shopping Optimization.
+Load `output-templates.md` for full templates.
