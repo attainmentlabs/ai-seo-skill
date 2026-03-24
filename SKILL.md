@@ -1,18 +1,17 @@
 ---
 name: ai-seo-skill
 description: >
-  Audit, plan, and execute traditional search engine optimization across 13 disciplines:
-  SEO, AEO (answer engine optimization), Entity SEO, Semantic SEO, voice search, social search
+  Use this skill when users ask about improving search rankings, SEO audits, or optimization
+  across any search platform. Covers 13 disciplines: traditional SEO (Google, Bing), AEO
+  (featured snippets, People Also Ask, answer boxes), voice search (Alexa, Siri), social search
   (TikTok, Instagram, Pinterest, LinkedIn), video SEO (YouTube), AI local SEO (Google Maps,
-  Apple Maps), visual search (Google Lens), Google AI Overviews, ASO (app store optimization),
-  podcast/audio search, and marketplace search (Amazon, Walmart). Use this skill whenever the
-  user wants to improve search rankings, run an SEO audit, optimize for featured snippets,
-  build topic clusters, fix technical SEO issues, improve local search visibility, optimize
-  YouTube videos, create schema markup, research keywords, analyze competitors, or rank higher
-  on any search platform. Also use when the user mentions Google rankings, Bing, SERP, backlinks,
-  Core Web Vitals, page speed, meta tags, Knowledge Graph, or any specific search platform
-  optimization. This skill covers traditional search engines and platforms. For AI-specific
-  citation optimization (ChatGPT, Perplexity, Claude citations), use ai-search-optimization-skill.
+  Google Business Profile), visual search (Google Lens), Google AI Overviews, ASO (app store
+  optimization), podcast/audio search, and marketplace search (Amazon, Walmart). Trigger on:
+  keyword rankings, topic clusters, schema markup, Core Web Vitals, backlinks, technical SEO,
+  SERP features, meta tags, local SEO, featured snippets, and YouTube optimization. The key
+  signal is: the user wants visibility in search engines or search platforms. Do NOT trigger
+  for getting cited by ChatGPT or Perplexity (use ai-search-optimization-skill), email
+  campaigns, paid ads, analytics setup, or conversion rate optimization.
 ---
 
 # Traditional Search Optimization (13 Disciplines)
